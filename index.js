@@ -57,7 +57,6 @@ $('.hod-logo').on('mouseenter', function() {
     $('.hod-logo').css('fill', '#2F2F2F');
     $(this).css('fill', currentType.color);
     $(`.${currentType.meaningWrapper}`).css('opacity', '1');
-    $(`.${currentType.meaningWrapper}`).css('z-index', '2');
 })
 
 $('.hod-logo').on('mouseleave', function() {
@@ -66,6 +65,5 @@ $('.hod-logo').on('mouseleave', function() {
 
         $(this).css('fill', currentType.color);
         $('.translation-wrapper').css('opacity', '0');
-        $('.translation-wrapper').css('z-index', '-1');
     })
 })
