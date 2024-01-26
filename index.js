@@ -2,27 +2,32 @@ const types = [
     {
         'name': 'ridaa',
         'color': '#FFDD55',
-        'class_element': 'ridaa_text-wrapper',
+        'meaning-wrapper': 'ridaa_text-wrapper',
     },
     {
         'name': 'niyyah',
-        'color': '#C8C8C8'
+        'color': '#C8C8C8',
+        'meaning-wrapper': 'niyyah_text-wrapper',
     },
     {
         'name': 'barakah',
-        'color': '#1DE591'
+        'color': '#1DE591',
+        'meaning-wrapper': 'barakah_text-wrapper',
     },
     {
         'name': 'amanah',
-        'color': '#AE62E8'
+        'color': '#AE62E8',
+        'meaning-wrapper': 'amanah_text-wrapper',
     },
     {
         'name': 'ihsan',
-        'color': '#66D1FF'
+        'color': '#66D1FF',
+        'meaning-wrapper': 'ihsan_text-wrapper',
     },
     {
         'name': 'iklas',
-        'color': '#FF5EA1'
+        'color': '#FF5EA1',
+        'meaning-wrapper': 'iklas_text-wrapper',
     },
 ]
 
@@ -51,6 +56,7 @@ $('.hod-logo').on('mouseenter', function() {
 
     $('.hod-logo').css('fill', '#2F2F2F');
     $(this).css('fill', currentType.color);
+    $(`.${currentType.meaning-wrapper}`).css('opacity', '1');
 })
 
 $('.hod-logo').on('mouseleave', function() {
@@ -58,5 +64,6 @@ $('.hod-logo').on('mouseleave', function() {
         let currentType = types.find(type => $(this).hasClass(type.name));
 
         $(this).css('fill', currentType.color);
+        $('.translation-wrapper').css('opacity', '0');
     })
 })
